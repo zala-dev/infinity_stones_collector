@@ -1,24 +1,17 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <h1>Infinity Stones</h1>
 
 {% for stone in infinity_stones %}
-<div class="card card-{{ stone.color }}">
+<div
+  class="card"
+  style="background-color: {% if stone.color %}{{ stone.color }}{% else %}white{% endif %};"
+>
   <div class="card-content">
-    <span class="card-title">
-      {{ stone.name }}</span>
-    <p>Color:
-      {{ stone.color }}
-    </p>
-    <p>Description:
-      {{ stone.description }}
-    </p>
-    <p>Owner:
-      {{ stone.owner }}
-    </p>
+    <span class="card-title"> {{ stone.name }}</span>
+    <p>Color: {{ stone.color }}</p>
+    <p>Description: {{ stone.description }}</p>
+    <p>Owner: {{ stone.owner }}</p>
   </div>
 </div>
-{% endfor %}
-
-{% endblock %}
+{% endfor %} {% endblock %}
