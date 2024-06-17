@@ -30,3 +30,10 @@ def infinity_stones_index(request):
     return render(request, 'infinity_stones/index.html', {
         'infinity_stones': stones
     })
+
+
+def infinity_stones_detail(request, stone_id):
+    stone = InfinityStones.objects.get(id=stone_id)
+    return render(request, 'infinity_stones/details.html', {
+        'stone': stone
+    })

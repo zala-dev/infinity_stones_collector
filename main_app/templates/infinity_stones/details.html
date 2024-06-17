@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Stone Details</h1>
+
+<div class="card">
+  <div class="card-content card-details">
+    <span class="card-title"> {{ stone.name }}</span>
+    <p>Color: {{ stone.color }}</p>
+    <p>Description: {{ stone.description }}</p>
+    <p>Owner: {{ stone.owner }}</p>
+  </div>
+</div>
+
+{% endblock %}
